@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "X Auto Quality",
+  "version": "1.0",
+  "description": "Forces X/Twitter videos to always play the highest-bitrate stream.",
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*", "https://*.x.com/*", "https://*.twitter.com/*"],
+      "js": ["quality.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    }
+  ]
+}
